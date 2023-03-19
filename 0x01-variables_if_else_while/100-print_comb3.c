@@ -8,18 +8,18 @@
 
 int main(void)
 {
-	int i;
-	int j;
+	int a;
+	int b;
 
-	for (i = 0 ; 1 < 10 ; i++)
+	for (a = 0 ; a < 10 ; a++)
 	{
-		for (j = 1 ; j < 10 ; j++)
+		for (b = 1 ; b < 10 ; b++)
 		{
-			if (i < j && i != j)
+			if (a < b && a != b)
 			{
-				putchar(i + '0');
-				putchar(j + '0');
-				if (i + j != 17)
+				putchar(a + '0');
+				putchar(b + '0');
+				if (a + b != 17)
 				{
 					putchar(',');
 					putchar(' ');
