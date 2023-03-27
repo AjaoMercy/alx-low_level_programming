@@ -8,31 +8,23 @@
 *Return: usually zero
 */
 
-
 void puts_half(char *str)
 {
-	int x;
-	int y = 0;
-	int i;
+	int count = 0, i;
 
-	for (x = 0; str[x] != '\0'; x++)
+	while (count >= 0)
 	{
-		y++;
+		if (str[count] == '\0')
+			break;
+		count++;
 	}
-	if (y % 2 == 0)
-	{
-		for (i = y / 2; str[i] != '\0'; i++)
-		{
-			_putchar(str[i]);
-		}
-		_putchar('\n');
-	}
-	else if (y % 2 != 0)
-	{
-		for (i = (y - 1) / 2; str[i] != '\0'; i++)
-		{
-			_putchar(str[i]);
-		}
-		_putchar('\n');
-	}
+
+	if (count % 2 == 1)
+		i = count / 2;
+	else
+		i = (count - 1) / 2;
+
+	for (i++; i < count; i++)
+		_putchar(str[i]);
+	_putchar('\n');
 }
