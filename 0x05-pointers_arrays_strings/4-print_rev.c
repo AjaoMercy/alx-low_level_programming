@@ -5,17 +5,21 @@
 *
 *@s: the string to be printed
 *
-*Return: usually zero
+*Return: usully zero
 */
 
 void print_rev(char *s)
 {
-	int x;
-	int y = 0;
+	int count = 0;
 
-	for (x = 0; s[x] != '\0'; x++)
-		y++;
-	for (x = y; x >= 0; x--)
-		_putchar(s[x]);
+	while (count >= 0)
+	{
+		if (s[count] == '\0')
+			break;
+		count++;
+	}
+
+	for (count--; count >= 0; count--)
+		_putchar(s[count]);
 	_putchar('\n');
 }
