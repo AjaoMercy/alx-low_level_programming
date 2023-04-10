@@ -30,9 +30,7 @@ int main(int argc, char *argv[])
 				return (1);
 			}
 			else
-			{
 				add += atoi(argv[x]);
-			}
 		}
 		printf("%d\n", add);
 	}
